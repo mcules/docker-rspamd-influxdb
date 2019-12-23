@@ -29,15 +29,15 @@ If that recommendations do not help then [report your issue](../../issues/new) a
 # Getting started
 ## Installation
 Automated builds of the image are available on
-[Dockerhub](https://hub.docker.com/r/quadstingray/rspamd-influxdb/)
+[Dockerhub](https://hub.docker.com/r/mcules/rspamd-influxdb/)
 
 ```bash
-docker pull quadstingray/rspamd-influxdb:0.5.0
+docker pull mcules/rspamd-influxdb:0.5.0
 ```
 
 Alternatively you can build the image yourself.
 ```bash
-docker build . --tag 'quadstingray/rspamd-influxdb:dev';
+docker build . --tag 'mcules/rspamd-influxdb:dev';
 ```
 
 ## Quickstart
