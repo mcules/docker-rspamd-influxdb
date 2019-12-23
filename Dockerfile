@@ -7,8 +7,8 @@ RUN apk update && apk upgrade && \
 apk add --no-cache bash git openssh
 
 # build directories
-ADD . /go/src/quadstingray/rspamd-influxdb
-WORKDIR /go/src/quadstingray/rspamd-influxdb
+ADD . /go/src/mcules/rspamd-influxdb
+WORKDIR /go/src/mcules/rspamd-influxdb
 
 # Go dep!
 RUN go get -u github.com/golang/dep/...
@@ -32,6 +32,6 @@ ENV INTERVAL=3600 \
     RSPAMD_PASSWORD="PASSWORD"
 
 RUN apk add ca-certificates
-COPY --from=build-env /go/src/quadstingray/rspamd-influxdb/rspamdInfluxDB /app/rspamdInfluxDB
+COPY --from=build-env /go/src/mcules/rspamd-influxdb/rspamdInfluxDB /app/rspamdInfluxDB
 ADD run.sh run.sh
 CMD sh run.sh
