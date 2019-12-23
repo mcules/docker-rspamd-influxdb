@@ -21,7 +21,7 @@ RUN go build -o rspamdInfluxDB *.go
 FROM alpine
 WORKDIR /app
 
-MAINTAINER QuadStingray <rspamd-influxdb@quadstingray.com>
+MAINTAINER McUles <rspamd-influxdb@itstall.de>
 
 ENV INTERVAL=3600 \
     INFLUXDB_DB="rspamd" \
